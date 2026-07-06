@@ -22,11 +22,14 @@ export default function ContactPage() {
             <p className="eyebrow">Best fit</p>
             <h2>Start here if you are looking for clarity, support, or a partner program.</h2>
             <p>
-              This static form is ready to connect to a form provider later. For now, the primary
-              contact path is email.
+              This static form is ready to connect to a form provider later. For now, the phone and
+              email are visible placeholders.
             </p>
             <a className="text-link" href={`mailto:${site.email}`}>
               {site.email}
+            </a>
+            <a className="text-link" href={`tel:${site.phone.replace(/[^0-9]/g, "")}`}>
+              {site.phone}
             </a>
           </article>
 

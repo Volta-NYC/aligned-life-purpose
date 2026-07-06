@@ -11,7 +11,14 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="Aligned Life Purpose home">
-        <span className="brand-mark">ALP</span>
+        <Image
+          className="brand-logo"
+          src="/aligned-life-purpose-logo.jpg"
+          alt="Aligned Life Purpose logo"
+          width={48}
+          height={48}
+          priority
+        />
         <span>{site.name}</span>
       </Link>
       <nav aria-label="Main navigation">
@@ -31,23 +38,43 @@ export function SiteHeader() {
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-      <div>
-        <Link className="footer-brand" href="/">
-          {site.name}
-        </Link>
-        <p>
-          Coaching and advisory support for adults, families, and organizations navigating
-          meaningful life transitions.
-        </p>
+      <div className="footer-main">
+        <div>
+          <Link className="footer-brand" href="/">
+            <Image
+              className="footer-logo"
+              src="/aligned-life-purpose-logo.jpg"
+              alt="Aligned Life Purpose logo"
+              width={46}
+              height={46}
+            />
+            {site.name}
+          </Link>
+          <p>
+            Life coaching for professionals navigating transition, purpose, career, family, and
+            personal change.
+          </p>
+        </div>
+        <div className="footer-links">
+          <Link href="/coaching">Coaching</Link>
+          <Link href="/coaching#pricing">Pricing</Link>
+          <Link href="/resources">Resources</Link>
+          <Link href="/partners">Partners</Link>
+          <a href={site.linkedin}>LinkedIn</a>
+        </div>
+        <address className="footer-contact">
+          <span>Contact</span>
+          <a href={`mailto:${site.email}`}>{site.email}</a>
+          <a href={`tel:${site.phone.replace(/[^0-9]/g, "")}`}>{site.phone}</a>
+          <small>Phone and email are placeholders.</small>
+        </address>
       </div>
-      <div className="footer-links">
-        <Link href="/coaching">Coaching</Link>
-        <Link href="/coaching#pricing">Pricing</Link>
-        <Link href="/resources">Resources</Link>
-        <Link href="/partners">Partners</Link>
-        <a href={site.linkedin}>LinkedIn</a>
+      <div className="footer-bottom-credit">
+        Website by{" "}
+        <a href={site.volta}>
+          Volta
+        </a>
       </div>
-      <p className="credit">Website by Volta</p>
     </footer>
   );
 }
@@ -78,7 +105,7 @@ export function PageHero({
 export function TransitionMap({ image }: { image?: string }) {
   return (
     <div className="transition-map reveal delay-1">
-      {image ? <Image src={image} alt="" fill sizes="(max-width: 900px) 100vw, 45vw" /> : null}
+      {image ? <PlaceholderImage label={image} /> : null}
       <div className="map-overlay">
         <span className="node node-a" />
         <span className="node node-b" />
@@ -89,6 +116,15 @@ export function TransitionMap({ image }: { image?: string }) {
           <path d="M90 138 C150 98 210 112 258 170 S322 268 350 304" />
         </svg>
       </div>
+    </div>
+  );
+}
+
+export function PlaceholderImage({ label }: { label: string }) {
+  return (
+    <div className="placeholder-image" role="img" aria-label={label}>
+      <span>Placeholder Image</span>
+      <strong>{label.replace("Placeholder image: ", "")}</strong>
     </div>
   );
 }

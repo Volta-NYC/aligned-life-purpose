@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import {
   CtaBand,
   OfferingGrid,
+  PlaceholderImage,
   ProcessRail,
   SectionIntro,
   TransitionMap,
@@ -52,13 +52,7 @@ export default function HomePage() {
 
       <section className="split-section">
         <div className="image-panel reveal">
-          <Image
-            src={imageAssets.journal}
-            alt="Journal, pen, and planning notes on a desk"
-            width={900}
-            height={675}
-            sizes="(max-width: 900px) 100vw, 45vw"
-          />
+          <PlaceholderImage label={imageAssets.journal} />
         </div>
         <div className="split-copy reveal delay-1">
           <p className="eyebrow">For individual clients</p>
@@ -97,13 +91,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="image-panel reveal delay-1">
-          <Image
-            src={imageAssets.care}
-            alt="Caregiver and older adult holding hands"
-            width={900}
-            height={675}
-            sizes="(max-width: 900px) 100vw, 45vw"
-          />
+          <PlaceholderImage label={imageAssets.care} />
         </div>
       </section>
 

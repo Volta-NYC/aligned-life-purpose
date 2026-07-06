@@ -3,7 +3,9 @@ export const site = {
   description:
     "Life coaching for professionals navigating seasons of transition with clarity, purpose, and practical action.",
   email: "hello@alignedlifepurpose.com",
+  phone: "(000) 000-0000",
   linkedin: "https://www.linkedin.com/company/aligned-life-purpose/",
+  volta: "https://voltanyc.org/",
 };
 
 export const navItems = [
@@ -109,11 +111,8 @@ export const resourceCards = [
 ];
 
 export const imageAssets = {
-  coaching:
-    "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1400&q=80",
-  conversation:
-    "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1400&q=80",
-  care: "https://images.unsplash.com/photo-1581579438747-1dc8d17bbce4?auto=format&fit=crop&w=1400&q=80",
-  journal:
-    "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1400&q=80",
+  coaching: "Placeholder image: Rachael Samuel professional portrait",
+  conversation: "Placeholder image: coaching conversation with a professional client",
+  care: "Placeholder image: group coaching session",
+  journal: "Placeholder image: notebook, purpose map, and coaching notes",
 };
