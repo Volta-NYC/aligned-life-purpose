@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
+import { SiteFooter, SiteHeader } from "./components";
+import { site } from "./data";
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Aligned Life Purpose",
-    template: "%s | Aligned Life Purpose",
+    default: site.name,
+    template: `%s | ${site.name}`,
   },
-  description:
-    "Coaching, reflection, and practical guidance for living with clarity, alignment, and intention.",
+  description: site.description,
 };
 
 export default function RootLayout({
@@ -17,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        {children}
+        <SiteFooter />
+      </body>
     </html>
   );
 }
