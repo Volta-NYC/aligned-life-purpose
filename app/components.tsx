@@ -14,12 +14,45 @@ function delayStyle(ms: number): CSSProperties {
 export function SiteHeader() {
   const pathname = usePathname();
   const [hash, setHash] = useState("");
+  const [isHiddenOnMobile, setIsHiddenOnMobile] = useState(false);
 
   useEffect(() => {
     const syncHash = () => setHash(window.location.hash);
     syncHash();
     window.addEventListener("hashchange", syncHash);
     return () => window.removeEventListener("hashchange", syncHash);
+  }, []);
+
+  useEffect(() => {
+    let lastScrollY = window.scrollY;
+
+    const syncHeaderVisibility = () => {
+      const currentScrollY = window.scrollY;
+      const isMobile = window.matchMedia("(max-width: 640px)").matches;
+
+      if (!isMobile) {
+        setIsHiddenOnMobile(false);
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY < 80) {
+        setIsHiddenOnMobile(false);
+      } else {
+        setIsHiddenOnMobile(currentScrollY > lastScrollY);
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", syncHeaderVisibility, { passive: true });
+    window.addEventListener("resize", syncHeaderVisibility);
+    syncHeaderVisibility();
+
+    return () => {
+      window.removeEventListener("scroll", syncHeaderVisibility);
+      window.removeEventListener("resize", syncHeaderVisibility);
+    };
   }, []);
 
   const isActive = (href: string) => {
@@ -41,7 +74,7 @@ export function SiteHeader() {
   };
 
   return (
-    <header className="site-header">
+    <header className={`site-header${isHiddenOnMobile ? " site-header--hidden-mobile" : ""}`}>
       <Link className="brand" href="/" aria-label="Aligned Life Purpose home">
         <Image
           className="brand-logo"
