@@ -57,7 +57,7 @@ export const processSteps = [
   },
   {
     title: "Clarify strengths and values",
-    copy: "Identify the inner resources, lived experience, faith, relationships, and practical assets already available.",
+    copy: "Identify the inner resources, lived experience, relationships, and practical assets already available.",
   },
   {
     title: "Design aligned action",
