@@ -59,7 +59,7 @@ export function SiteFooter() {
           <Link href="/coaching">Coaching</Link>
           <Link href="/coaching#pricing">Pricing</Link>
           <Link href="/resources">Resources</Link>
-          <Link href="/partners">Partners</Link>
+          <Link href="/partners">Programs</Link>
           <a href={site.linkedin}>LinkedIn</a>
         </div>
         <address className="footer-contact">
@@ -177,7 +177,7 @@ export function ProcessRail() {
 
 export function CtaBand({
   title = "Start with a conversation.",
-  copy = "Share the transition you are navigating, the people you want to support, or the partnership you are exploring.",
+  copy = "Share the transition you are navigating, the people you want to support, or the group program you are exploring.",
 }: {
   title?: string;
   copy?: string;

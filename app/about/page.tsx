@@ -16,7 +16,7 @@ const facts = [
 
 export default function AboutPage() {
   return (
-    <main>
+    <main className="page-about">
       <PageHero
         eyebrow="About ALP"
         title="A coaching practice for the human side of change."

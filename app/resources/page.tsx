@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ResourcesPage() {
   return (
-    <main>
+    <main className="page-resources">
       <PageHero
         eyebrow="Resources"
         title="Tools for the questions that surface during change."
@@ -19,7 +19,7 @@ export default function ResourcesPage() {
       <section className="section">
         <SectionIntro
           eyebrow="Starter library"
-          title="Draft resources to convert visitors into consults and partnership conversations."
+          title="Draft resources to convert visitors into consults and group program conversations."
         />
         <div className="resource-grid">
           {resourceCards.map((resource) => (

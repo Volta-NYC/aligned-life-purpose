@@ -13,7 +13,7 @@ export const navItems = [
   { href: "/about", label: "About" },
   { href: "/coaching", label: "Coaching" },
   { href: "/coaching#pricing", label: "Pricing" },
-  { href: "/partners", label: "Partners" },
+  { href: "/partners", label: "Programs" },
   { href: "/resources", label: "Resources" },
   { href: "/contact", label: "Contact" },
 ];

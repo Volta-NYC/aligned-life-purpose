@@ -3,7 +3,7 @@ import { CtaBand, PageHero, SectionIntro } from "../components";
 import { imageAssets } from "../data";
 
 export const metadata: Metadata = {
-  title: "Partners",
+  title: "Programs",
 };
 
 const partners = [
@@ -36,18 +36,18 @@ const models = [
 
 export default function PartnersPage() {
   return (
-    <main>
+    <main className="page-programs">
       <PageHero
-        eyebrow="Partnerships"
-        title="A coaching partner for organizations serving people in transition."
-        copy="ALP can help organizations offer structured coaching support to professionals navigating work, family, health, and purpose transitions."
+        eyebrow="Programs"
+        title="Group coaching programs for people moving through change together."
+        copy="This page is useful if ALP wants to sell group coaching, workshops, and organization-ready transition programs. If that is not a near-term focus, it can be removed later without hurting the core site."
         image={imageAssets.coaching}
       />
 
       <section className="section">
         <SectionIntro
-          eyebrow="Partner fit"
-          title="Built for organizations whose people need clarity during life change."
+          eyebrow="Program fit"
+          title="Built for groups whose people need clarity during life change."
           copy="Participants may be seeking a promotion, changing careers, starting a business, becoming newly married, becoming a new parent, facing a health crisis, or entering an empty-nester season."
         />
         <div className="feature-grid">
@@ -63,7 +63,7 @@ export default function PartnersPage() {
       <section className="content-section">
         <SectionIntro
           eyebrow="Program models"
-          title="Partnerships can start small, prove value, and scale."
+          title="Program formats can start small, prove value, and scale."
         />
         <div className="resource-grid">
           {models.map((model, index) => (
@@ -80,7 +80,7 @@ export default function PartnersPage() {
       </section>
 
       <CtaBand
-        title="Explore a pilot partnership."
+        title="Explore a pilot program."
         copy="Use the contact page to describe the population you serve, the transition they face, and the support gap you want to close."
       />
     </main>

@@ -23,7 +23,7 @@ const formats = [
 
 export default function CoachingPage() {
   return (
-    <main>
+    <main className="page-coaching">
       <PageHero
         eyebrow="Coaching"
         title="Support for professionals becoming someone new."
