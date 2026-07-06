@@ -14,19 +14,19 @@ export default function HomePage() {
     <main>
       <section className="home-hero">
         <div className="hero-copy reveal">
-          <p className="eyebrow">Life-change coaching and advisory</p>
+          <p className="eyebrow">Life coaching for professionals in transition</p>
           <h1>Find your footing in the season that is reshaping your life.</h1>
           <p className="hero-lede">
-            Aligned Life Purpose supports people in transition with coaching, elder care
-            advisory, group facilitation, and organization-ready programs built around clarity,
-            confidence, and purposeful action.
+            Aligned Life Purpose supports professionals pursuing promotions, changing careers,
+            starting businesses, growing families, facing health crises, becoming empty nesters, or
+            stepping into a new chapter with clarity, confidence, and purposeful action.
           </p>
           <div className="hero-actions">
             <Link className="button button-primary" href="/contact">
               Book a consult
             </Link>
-            <Link className="button button-secondary" href="/partners">
-              Partner with ALP
+          <Link className="button button-secondary" href="/partners">
+              Explore groups
             </Link>
           </div>
         </div>
@@ -45,7 +45,7 @@ export default function HomePage() {
         <SectionIntro
           eyebrow="What ALP supports"
           title="Guidance for chosen changes, unexpected changes, and the space in between."
-          copy="The public company profile describes Aligned Life Purpose as life-change coaching and elder care advisory. This draft expands that into a complete client and partner journey."
+          copy="Aligned Life Purpose offers individual and group life coaching for professionals navigating meaningful transitions in work, family, health, and identity."
         />
         <OfferingGrid />
       </section>
@@ -65,8 +65,9 @@ export default function HomePage() {
           <h2>Turn uncertainty into a plan you can actually live with.</h2>
           <p>
             Career change, business creation, marriage, family planning, divorce, illness
-            recovery, and caregiving all ask the same deeper question: who am I becoming now?
-            ALP gives clients room to answer that question and move forward with structure.
+            recovery, new parenthood, empty nesting, and promotion seasons all ask the same deeper
+            question: who am I becoming now? ALP gives clients room to answer that question and move
+            forward with structure.
           </p>
           <Link className="text-link" href="/coaching">
             Explore coaching
@@ -84,15 +85,15 @@ export default function HomePage() {
 
       <section className="split-section reverse">
         <div className="split-copy reveal">
-          <p className="eyebrow">For health organizations</p>
-          <h2>Partner support for clients facing complex life transitions.</h2>
+          <p className="eyebrow">For groups and organizations</p>
+          <h2>Group coaching for people moving through life change together.</h2>
           <p>
-            ALP can become a referral-ready coaching partner for health systems, senior services,
-            recovery programs, wellness organizations, and community groups that want clients to
-            feel supported beyond the appointment.
+            ALP can support teams, cohorts, community groups, and professional networks with
+            structured coaching conversations that help people name what is changing and move
+            forward with purpose.
           </p>
           <Link className="text-link" href="/partners">
-            See partnership options
+            See group options
           </Link>
         </div>
         <div className="image-panel reveal delay-1">

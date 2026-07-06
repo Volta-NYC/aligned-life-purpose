@@ -1,7 +1,7 @@
 export const site = {
   name: "Aligned Life Purpose",
   description:
-    "Life-change coaching and elder care advisory for people and organizations navigating seasons of transition.",
+    "Life coaching for professionals navigating seasons of transition with clarity, purpose, and practical action.",
   email: "hello@alignedlifepurpose.com",
   linkedin: "https://www.linkedin.com/company/aligned-life-purpose/",
 };
@@ -10,43 +10,64 @@ export const navItems = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/coaching", label: "Coaching" },
-  { href: "/elder-care", label: "Elder Care" },
+  { href: "/coaching#pricing", label: "Pricing" },
   { href: "/partners", label: "Partners" },
   { href: "/resources", label: "Resources" },
   { href: "/contact", label: "Contact" },
 ];
 
 export const transitions = [
+  "Job promotion",
   "Career change",
-  "Business creation",
-  "Marriage",
-  "Parenthood",
-  "Divorce",
-  "Illness recovery",
-  "Caregiving",
-  "Retirement planning",
+  "Starting a business",
+  "Newly married",
+  "New parent",
+  "Health crisis",
+  "Empty nester",
+  "Purpose reset",
 ];
 
 export const offerings = [
   {
-    title: "Private Life-Change Coaching",
-    copy: "One-on-one support for professionals and adults who need clarity, structure, and momentum during a major personal or professional shift.",
+    title: "Individual Life Coaching",
+    copy: "Private 45-60 minute sessions for professionals who need clarity, structure, and momentum in a personal or professional transition.",
     href: "/coaching",
   },
   {
     title: "Group Coaching",
-    copy: "Facilitated circles and cohorts for people who benefit from guided reflection, peer perspective, and shared accountability.",
+    copy: "Facilitated coaching groups for people who benefit from guided reflection, shared language, and supportive accountability.",
     href: "/coaching#group",
   },
   {
-    title: "Elder Care Advisory",
-    copy: "Planning support for families and caregivers who need to understand care options, organize decisions, and move with compassion.",
-    href: "/elder-care",
+    title: "Four-Session Package",
+    copy: "A focused coaching arc for clients who want to clarify the transition, set direction, and leave with practical next steps.",
+    href: "/coaching#pricing",
   },
   {
-    title: "Health Organization Partnerships",
-    copy: "Coaching programs that help hospitals, clinics, senior services, and wellness organizations support clients through life change.",
-    href: "/partners",
+    title: "Twelve-Session Package",
+    copy: "A deeper coaching container for sustained support, habit-building, decision-making, and integration across a full season of change.",
+    href: "/coaching#pricing",
+  },
+];
+
+export const pricing = [
+  {
+    name: "Single Session",
+    price: "$150",
+    detail: "45-60 minutes",
+    copy: "A focused coaching session for one decision, transition point, or next-step planning conversation.",
+  },
+  {
+    name: "Four Sessions",
+    price: "$600",
+    detail: "45-60 minutes each",
+    copy: "A short coaching package for clarity, aligned goals, accountability, and early momentum.",
+  },
+  {
+    name: "Twelve Sessions",
+    price: "$1,800",
+    detail: "45-60 minutes each",
+    copy: "A full-season package for professionals making deeper changes in work, family, health, identity, or purpose.",
   },
 ];
 
@@ -76,13 +97,13 @@ export const resourceCards = [
     type: "Guide",
   },
   {
-    title: "Care Conversation Planner",
-    copy: "A simple agenda for families preparing to talk about aging, care needs, roles, and options.",
+    title: "Purpose and Promotion Planner",
+    copy: "A simple worksheet for professionals preparing for a promotion, career move, business launch, or new level of responsibility.",
     type: "Worksheet",
   },
   {
-    title: "Partnership Program Outline",
-    copy: "A draft structure for health organizations exploring coaching support for client populations.",
+    title: "Group Coaching Program Outline",
+    copy: "A draft structure for organizations exploring coaching support for professionals navigating transition seasons.",
     type: "Brief",
   },
 ];

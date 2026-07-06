@@ -38,7 +38,7 @@ export default function ResourcesPage() {
           title="Recommended article categories for the finished site."
         />
         <div className="story-grid">
-          {["Life transitions", "Elder care planning", "Career and business purpose"].map((theme) => (
+          {["Life transitions", "Career and business purpose", "Family and health transitions"].map((theme) => (
             <article className="story-card reveal" key={theme}>
               <h3>{theme}</h3>
               <p>

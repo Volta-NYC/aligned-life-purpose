@@ -42,7 +42,8 @@ export function SiteFooter() {
       </div>
       <div className="footer-links">
         <Link href="/coaching">Coaching</Link>
-        <Link href="/elder-care">Elder Care</Link>
+        <Link href="/coaching#pricing">Pricing</Link>
+        <Link href="/resources">Resources</Link>
         <Link href="/partners">Partners</Link>
         <a href={site.linkedin}>LinkedIn</a>
       </div>

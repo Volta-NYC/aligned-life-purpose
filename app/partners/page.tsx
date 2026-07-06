@@ -8,28 +8,28 @@ export const metadata: Metadata = {
 
 const partners = [
   {
-    title: "Hospitals and clinics",
-    copy: "Support patients and caregivers as they adjust to diagnosis, recovery, caregiving, discharge, or lifestyle change.",
-  },
-  {
-    title: "Senior service organizations",
-    copy: "Offer families a coaching pathway for elder care conversations, role clarity, and transition planning.",
+    title: "Professional associations",
+    copy: "Offer members a coaching space for promotion readiness, career pivots, purpose resets, and leadership transitions.",
   },
   {
     title: "Workforce and career programs",
-    copy: "Help participants navigate career pivots, entrepreneurship, and identity shifts with confidence.",
+    copy: "Help participants navigate job growth, career change, entrepreneurship, and identity shifts with confidence.",
   },
   {
-    title: "Community wellness groups",
-    copy: "Bring group coaching and reflection workshops to people facing major personal or family transitions.",
+    title: "Employee wellness programs",
+    copy: "Bring coaching support to professionals facing health crises, family change, burnout, or a major life transition.",
+  },
+  {
+    title: "Community and faith-based groups",
+    copy: "Bring group coaching and reflection workshops to people facing meaningful personal, family, or professional change.",
   },
 ];
 
 const models = [
-  "Referral partner",
   "Group workshop series",
-  "Client coaching package",
-  "Caregiver support cohort",
+  "Professional transition cohort",
+  "New parent support group",
+  "Career change coaching circle",
   "Transition readiness program",
   "Custom organization pilot",
 ];
@@ -40,15 +40,15 @@ export default function PartnersPage() {
       <PageHero
         eyebrow="Partnerships"
         title="A coaching partner for organizations serving people in transition."
-        copy="ALP can help health and community organizations extend support beyond clinical, case management, or program touchpoints."
+        copy="ALP can help organizations offer structured coaching support to professionals navigating work, family, health, and purpose transitions."
         image={imageAssets.coaching}
       />
 
       <section className="section">
         <SectionIntro
           eyebrow="Partner fit"
-          title="Built for organizations whose clients need clarity between appointments."
-          copy="The client population may be facing illness recovery, caregiving, family change, career disruption, or an identity shift that affects wellbeing and follow-through."
+          title="Built for organizations whose people need clarity during life change."
+          copy="Participants may be seeking a promotion, changing careers, starting a business, becoming newly married, becoming a new parent, facing a health crisis, or entering an empty-nester season."
         />
         <div className="feature-grid">
           {partners.map((partner) => (

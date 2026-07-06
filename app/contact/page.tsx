@@ -12,7 +12,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Tell ALP what transition you are navigating."
-        copy="Use this draft contact flow for paid client inquiries, caregiver advisory requests, and organization partnership conversations."
+        copy="Use this contact flow for individual coaching inquiries, group coaching requests, and organization partnership conversations."
         image={imageAssets.conversation}
       />
 
@@ -45,9 +45,10 @@ export default function ContactPage() {
                 <option value="" disabled>
                   Select one
                 </option>
-                <option>Private coaching</option>
+                <option>Individual life coaching</option>
                 <option>Group coaching</option>
-                <option>Elder care advisory</option>
+                <option>Four-session package</option>
+                <option>Twelve-session package</option>
                 <option>Organization partnership</option>
               </select>
             </label>

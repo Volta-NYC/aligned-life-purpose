@@ -361,6 +361,7 @@ h3 {
 .feature-grid,
 .story-grid,
 .resource-grid,
+.pricing-grid,
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -370,6 +371,7 @@ h3 {
 .feature-card,
 .story-card,
 .resource-card,
+.pricing-card,
 .contact-card {
   position: relative;
   min-height: 285px;
@@ -385,6 +387,7 @@ h3 {
 .feature-card::before,
 .story-card::before,
 .resource-card::before,
+.pricing-card::before,
 .contact-card::before {
   content: "";
   position: absolute;
@@ -397,6 +400,7 @@ h3 {
 .feature-card > *,
 .story-card > *,
 .resource-card > *,
+.pricing-card > *,
 .contact-card > * {
   position: relative;
   z-index: 1;
@@ -405,6 +409,7 @@ h3 {
 .feature-card:hover,
 .story-card:hover,
 .resource-card:hover,
+.pricing-card:hover,
 .contact-card:hover {
   transform: translateY(-6px);
   border-color: rgba(29, 100, 216, 0.35);
@@ -414,13 +419,15 @@ h3 {
 .feature-card:hover::before,
 .story-card:hover::before,
 .resource-card:hover::before,
+.pricing-card:hover::before,
 .contact-card:hover::before {
   opacity: 1;
 }
 
 .feature-card span,
 .process-card span,
-.resource-card span {
+.resource-card span,
+.pricing-card span {
   display: inline-flex;
   margin-bottom: 1.4rem;
   color: var(--blue);
@@ -538,6 +545,37 @@ h3 {
 
 .resource-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pricing-section {
+  background: linear-gradient(180deg, white, rgba(232, 241, 255, 0.64));
+}
+
+.pricing-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.pricing-card {
+  min-height: 330px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 248, 255, 0.9)),
+    white;
+}
+
+.pricing-card .price {
+  margin-bottom: 0.1rem;
+  color: var(--navy);
+  font-size: clamp(2.7rem, 5vw, 4.5rem);
+  font-weight: 950;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+}
+
+.pricing-card .price-detail {
+  margin-bottom: 1.25rem;
+  color: var(--blue);
+  font-size: 0.92rem;
+  font-weight: 900;
 }
 
 .story-card,
@@ -732,6 +770,7 @@ h3 {
 
   .process-rail,
   .story-grid,
+  .pricing-grid,
   .resource-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -772,6 +811,7 @@ h3 {
   .feature-grid,
   .process-rail,
   .story-grid,
+  .pricing-grid,
   .resource-grid {
     grid-template-columns: 1fr;
   }
