@@ -102,14 +102,28 @@ nav {
 }
 
 nav a {
+  position: relative;
   border-bottom: 2px solid transparent;
   padding: 0.25rem 0;
 }
 
 nav a:hover,
+nav a.is-active,
 .footer-links a:hover {
   color: var(--azure);
   border-color: currentColor;
+}
+
+nav a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.72rem;
+  height: 7px;
+  border: 2px solid var(--ink);
+  background: var(--cyan);
+  box-shadow: 3px 3px 0 var(--ink);
 }
 
 .nav-cta,
@@ -921,7 +935,7 @@ h3 {
 .split-section {
   animation: sectionReveal 1900ms cubic-bezier(0.1, 0.78, 0.16, 1) both;
   animation-timeline: view();
-  animation-range: entry 0% cover 58%;
+  animation-range: entry 0% cover 48%;
 }
 
 .split-section:nth-of-type(even),
@@ -939,7 +953,7 @@ h3 {
 .contact-form label {
   animation: revealUp 1700ms cubic-bezier(0.1, 0.78, 0.16, 1) both;
   animation-timeline: view();
-  animation-range: entry 0% cover 48%;
+  animation-range: entry 0% cover 42%;
 }
 
 .placeholder-image strong,
@@ -957,10 +971,10 @@ h3 {
 
 .reveal {
   opacity: 0;
-  animation: revealUp 2300ms cubic-bezier(0.1, 0.78, 0.16, 1) both;
+  animation: revealUp 1700ms cubic-bezier(0.1, 0.78, 0.16, 1) both;
   animation-delay: var(--delay, 0ms);
   animation-timeline: view();
-  animation-range: entry 0% cover 68%;
+  animation-range: entry 0% cover 54%;
 }
 
 .delay-1 {
@@ -988,12 +1002,10 @@ h3 {
 @keyframes revealUp {
   from {
     opacity: 0;
-    filter: blur(10px);
-    transform: translateY(180px) scale(0.9);
+    transform: translateY(130px) scale(0.94);
   }
   to {
     opacity: 1;
-    filter: blur(0);
     transform: none;
   }
 }
@@ -1001,12 +1013,10 @@ h3 {
 @keyframes revealLeft {
   from {
     opacity: 0;
-    filter: blur(10px);
-    transform: translateX(-280px) rotate(-2deg) scale(0.9);
+    transform: translateX(-210px) rotate(-1.5deg) scale(0.94);
   }
   to {
     opacity: 1;
-    filter: blur(0);
     transform: none;
   }
 }
@@ -1014,12 +1024,10 @@ h3 {
 @keyframes revealRight {
   from {
     opacity: 0;
-    filter: blur(10px);
-    transform: translateX(280px) rotate(2deg) scale(0.9);
+    transform: translateX(210px) rotate(1.5deg) scale(0.94);
   }
   to {
     opacity: 1;
-    filter: blur(0);
     transform: none;
   }
 }
@@ -1027,12 +1035,10 @@ h3 {
 @keyframes sectionReveal {
   from {
     opacity: 0;
-    filter: blur(8px);
     transform: translateY(120px) scale(0.96);
   }
   to {
     opacity: 1;
-    filter: blur(0);
     transform: none;
   }
 }
@@ -1040,12 +1046,10 @@ h3 {
 @keyframes sectionRevealLeft {
   from {
     opacity: 0;
-    filter: blur(8px);
     transform: translateX(-120px) scale(0.96);
   }
   to {
     opacity: 1;
-    filter: blur(0);
     transform: none;
   }
 }
@@ -1053,12 +1057,10 @@ h3 {
 @keyframes sectionRevealRight {
   from {
     opacity: 0;
-    filter: blur(8px);
     transform: translateX(120px) scale(0.96);
   }
   to {
     opacity: 1;
-    filter: blur(0);
     transform: none;
   }
 }
@@ -1098,7 +1100,6 @@ h3 {
   .reveal {
     opacity: 1;
     transform: none;
-    filter: none;
   }
 }
 

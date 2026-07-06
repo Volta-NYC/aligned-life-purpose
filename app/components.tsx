@@ -1,5 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import type { CSSProperties } from "react";
 import { navItems, offerings, processSteps, site } from "./data";
 
@@ -8,6 +12,34 @@ function delayStyle(ms: number): CSSProperties {
 }
 
 export function SiteHeader() {
+  const pathname = usePathname();
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    const syncHash = () => setHash(window.location.hash);
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+    return () => window.removeEventListener("hashchange", syncHash);
+  }, []);
+
+  const isActive = (href: string) => {
+    if (pathname === "/") {
+      return false;
+    }
+
+    const [path, targetHash] = href.split("#");
+
+    if (targetHash) {
+      return pathname === path && hash === `#${targetHash}`;
+    }
+
+    if (href === "/coaching" && pathname === "/coaching" && hash === "#pricing") {
+      return false;
+    }
+
+    return pathname === href;
+  };
+
   return (
     <header className="site-header">
       <Link className="brand" href="/" aria-label="Aligned Life Purpose home">
@@ -23,7 +55,12 @@ export function SiteHeader() {
       </Link>
       <nav aria-label="Main navigation">
         {navItems.map((item) => (
-          <Link href={item.href} key={item.href}>
+          <Link
+            className={isActive(item.href) ? "is-active" : undefined}
+            href={item.href}
+            key={item.href}
+            aria-current={isActive(item.href) ? "page" : undefined}
+          >
             {item.label}
           </Link>
         ))}
