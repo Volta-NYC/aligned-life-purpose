@@ -68,12 +68,12 @@ export function SiteFooter() {
           <a href={`tel:${site.phone.replace(/[^0-9]/g, "")}`}>{site.phone}</a>
           <small>Phone and email are placeholders.</small>
         </address>
-      </div>
-      <div className="footer-bottom-credit">
-        Website by{" "}
-        <a href={site.volta}>
-          Volta
-        </a>
+        <div className="footer-credit">
+          Website by{" "}
+          <a href={site.volta}>
+            Volta
+          </a>
+        </div>
       </div>
     </footer>
   );
