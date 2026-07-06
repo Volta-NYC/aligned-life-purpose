@@ -26,6 +26,7 @@
 
 html {
   background: var(--white);
+  overflow-x: clip;
 }
 
 body {
@@ -793,12 +794,60 @@ h3 {
   color: var(--green);
 }
 
+.home-hero,
+.page-hero,
+.ticker-band,
+.section,
+.content-section,
+.dark-section,
+.split-section,
+.site-footer {
+  animation: sectionReveal 1900ms cubic-bezier(0.1, 0.78, 0.16, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 58%;
+}
+
+.split-section:nth-of-type(even),
+.content-section:nth-of-type(even) {
+  animation-name: sectionRevealRight;
+}
+
+.split-section:nth-of-type(odd),
+.section:nth-of-type(odd) {
+  animation-name: sectionRevealLeft;
+}
+
+.placeholder-image span,
+.placeholder-image strong,
+.footer-main > *,
+.contact-form label {
+  animation: revealUp 1700ms cubic-bezier(0.1, 0.78, 0.16, 1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 48%;
+}
+
+.placeholder-image strong,
+.footer-main > *:nth-child(2),
+.contact-form label:nth-child(2) {
+  animation-delay: 140ms;
+}
+
+.footer-main > *:nth-child(3),
+.contact-form label:nth-child(3) {
+  animation-delay: 260ms;
+}
+
+.footer-main > *:nth-child(4),
+.contact-form label:nth-child(4) {
+  animation-delay: 380ms;
+}
+
 .reveal {
   opacity: 0;
-  animation: revealUp 1500ms cubic-bezier(0.12, 0.82, 0.18, 1) both;
+  animation: revealUp 2300ms cubic-bezier(0.1, 0.78, 0.16, 1) both;
   animation-delay: var(--delay, 0ms);
   animation-timeline: view();
-  animation-range: entry 0% cover 46%;
+  animation-range: entry 0% cover 68%;
 }
 
 .delay-1 {
@@ -826,10 +875,12 @@ h3 {
 @keyframes revealUp {
   from {
     opacity: 0;
-    transform: translateY(96px) scale(0.96);
+    filter: blur(10px);
+    transform: translateY(180px) scale(0.9);
   }
   to {
     opacity: 1;
+    filter: blur(0);
     transform: none;
   }
 }
@@ -837,10 +888,12 @@ h3 {
 @keyframes revealLeft {
   from {
     opacity: 0;
-    transform: translateX(-150px) scale(0.96);
+    filter: blur(10px);
+    transform: translateX(-280px) rotate(-2deg) scale(0.9);
   }
   to {
     opacity: 1;
+    filter: blur(0);
     transform: none;
   }
 }
@@ -848,10 +901,51 @@ h3 {
 @keyframes revealRight {
   from {
     opacity: 0;
-    transform: translateX(150px) scale(0.96);
+    filter: blur(10px);
+    transform: translateX(280px) rotate(2deg) scale(0.9);
   }
   to {
     opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+}
+
+@keyframes sectionReveal {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(120px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+}
+
+@keyframes sectionRevealLeft {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateX(-120px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+}
+
+@keyframes sectionRevealRight {
+  from {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateX(120px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
     transform: none;
   }
 }
@@ -891,6 +985,7 @@ h3 {
   .reveal {
     opacity: 1;
     transform: none;
+    filter: none;
   }
 }
 
@@ -977,6 +1072,17 @@ h3 {
   .resource-card:nth-child(n),
   .pricing-card:nth-child(n) {
     animation-name: revealUp;
+  }
+
+  .home-hero,
+  .page-hero,
+  .ticker-band,
+  .section,
+  .content-section,
+  .dark-section,
+  .split-section,
+  .site-footer {
+    animation-name: sectionReveal;
   }
 
   .process-card {
