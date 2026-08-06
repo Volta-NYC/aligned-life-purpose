@@ -139,9 +139,9 @@ export function SiteFooter() {
           <small>Phone and email are placeholders.</small>
         </address>
         <div className="footer-credit">
-          Website by{" "}
-          <a href={site.volta}>
-            Volta
+          Made by{" "}
+          <a href="https://www.novusnyc.org/">
+            Novus
           </a>
         </div>
       </div>
