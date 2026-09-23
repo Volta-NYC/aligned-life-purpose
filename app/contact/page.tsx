@@ -13,7 +13,7 @@ export default function ContactPage() {
         eyebrow="Contact"
         title="Tell ALP what transition you are navigating."
         copy="Use this contact flow for individual coaching inquiries, group coaching requests, and organization program conversations."
-        image={imageAssets.conversation}
+        image={imageAssets.outdoorsSmiling}
       />
 
       <section className="section">

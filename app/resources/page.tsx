@@ -13,7 +13,7 @@ export default function ResourcesPage() {
         eyebrow="Resources"
         title="Tools for the questions that surface during change."
         copy="A resource library gives ALP a useful content engine for SEO, email capture, workshops, and partner conversations."
-        image={imageAssets.journal}
+        image={imageAssets.headshot}
       />
 
       <section className="section">

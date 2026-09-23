@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CtaBand, PageHero, SectionIntro } from "../components";
+import { CtaBand, PageHero, PortraitImage, SectionIntro } from "../components";
 import { imageAssets } from "../data";
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function AboutPage() {
         eyebrow="About ALP"
         title="A coaching practice for the human side of change."
         copy="Aligned Life Purpose helps professionals name what is changing, reconnect with what matters, and choose the next step with steadiness."
-        image={imageAssets.coaching}
+        image={imageAssets.outdoorsSmiling}
       />
 
       <section className="content-section">
@@ -54,14 +54,8 @@ export default function AboutPage() {
             people ready to clarify goals and take aligned action.
           </p>
         </div>
-        <div className="story-card reveal delay-1">
-          <p className="eyebrow">Draft positioning</p>
-          <h3>Rachael works with people standing at the threshold of a new life chapter.</h3>
-          <p>
-            The site positions Aligned Life Purpose as reflective, action-oriented coaching for job
-            promotions, career changes, business launches, newly married life, new parenthood,
-            health crises, empty nesting, and other major transition seasons.
-          </p>
+        <div className="image-panel reveal delay-1">
+          <PortraitImage image={imageAssets.headshot} />
         </div>
       </section>
 

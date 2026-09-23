@@ -28,7 +28,7 @@ export default function CoachingPage() {
         eyebrow="Coaching"
         title="Support for professionals becoming someone new."
         copy="Coaching at ALP is for professionals who are ready to stop circling the same question and start building a next chapter that matches their values."
-        image={imageAssets.journal}
+        image={imageAssets.patternedPortrait}
       />
 
       <section className="section">

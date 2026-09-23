@@ -41,7 +41,7 @@ export default function PartnersPage() {
         eyebrow="Programs"
         title="Group coaching programs for people moving through change together."
         copy="This page is useful if ALP wants to sell group coaching, workshops, and organization-ready transition programs. If that is not a near-term focus, it can be removed later without hurting the core site."
-        image={imageAssets.coaching}
+        image={imageAssets.outdoorsPortrait}
       />
 
       <section className="section">

@@ -29,6 +29,12 @@ export const transitions = [
   "Purpose reset",
 ];
 
+export const homeTaglines = [
+  "Choose Your Path. Step Into Your Next Season.",
+  "Navigate Your Transition. Choose Your Next Chapter.",
+  "Take the First Step. Move Forward with Purpose.",
+];
+
 export const offerings = [
   {
     title: "Individual Life Coaching",
@@ -111,8 +117,26 @@ export const resourceCards = [
 ];
 
 export const imageAssets = {
-  coaching: "Placeholder image: Rachael Samuel professional portrait",
-  conversation: "Placeholder image: coaching conversation with a professional client",
-  care: "Placeholder image: group coaching session",
-  journal: "Placeholder image: notebook, purpose map, and coaching notes",
+  headshot: {
+    src: "/images/rachael-green-headshot.webp",
+    alt: "Rachael Samuel smiling in a green top",
+    position: "center 30%",
+  },
+  patternedPortrait: {
+    src: "/images/rachael-patterned-top.jpg",
+    alt: "Rachael Samuel standing with her arms crossed",
+    position: "center",
+  },
+  outdoorsPortrait: {
+    src: "/images/rachael-outdoors-portrait.jpg",
+    alt: "Rachael Samuel outdoors in New York City",
+    position: "center 25%",
+  },
+  outdoorsSmiling: {
+    src: "/images/rachael-outdoors-smiling.jpg",
+    alt: "Rachael Samuel smiling outdoors in New York City",
+    position: "center 25%",
+  },
 };
+
+export type ImageAsset = (typeof imageAssets)[keyof typeof imageAssets];

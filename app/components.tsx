@@ -5,7 +5,14 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import type { CSSProperties } from "react";
-import { navItems, offerings, processSteps, site } from "./data";
+import {
+  homeTaglines,
+  navItems,
+  offerings,
+  processSteps,
+  site,
+  type ImageAsset,
+} from "./data";
 
 function delayStyle(ms: number): CSSProperties {
   return { "--delay": `${ms}ms` } as CSSProperties;
@@ -158,7 +165,7 @@ export function PageHero({
   title: string;
   copy: string;
   eyebrow?: string;
-  image?: string;
+  image?: ImageAsset;
 }) {
   return (
     <section className="page-hero">
@@ -172,10 +179,10 @@ export function PageHero({
   );
 }
 
-export function TransitionMap({ image }: { image?: string }) {
+export function TransitionMap({ image }: { image?: ImageAsset }) {
   return (
     <div className="transition-map reveal delay-1">
-      {image ? <PlaceholderImage label={image} /> : null}
+      {image ? <PortraitImage image={image} priority /> : null}
       <div className="map-overlay">
         <span className="node node-a" />
         <span className="node node-b" />
@@ -190,12 +197,55 @@ export function TransitionMap({ image }: { image?: string }) {
   );
 }
 
-export function PlaceholderImage({ label }: { label: string }) {
+export function PortraitImage({
+  image,
+  priority = false,
+}: {
+  image: ImageAsset;
+  priority?: boolean;
+}) {
   return (
-    <div className="placeholder-image" role="img" aria-label={label}>
-      <span>Placeholder Image</span>
-      <strong>{label.replace("Placeholder image: ", "")}</strong>
-    </div>
+    <Image
+      className="portrait-image"
+      src={image.src}
+      alt={image.alt}
+      fill
+      priority={priority}
+      sizes="(max-width: 900px) 100vw, 50vw"
+      style={{ objectFit: "cover", objectPosition: image.position }}
+    />
+  );
+}
+
+export function TaglineCycle() {
+  const [taglineIndex, setTaglineIndex] = useState(0);
+
+  useEffect(() => {
+    const rotation = window.setInterval(() => {
+      setTaglineIndex((current) => (current + 1) % homeTaglines.length);
+    }, 5000);
+
+    return () => window.clearInterval(rotation);
+  }, []);
+
+  return (
+    <>
+      <h1 className="tagline" aria-live="polite">
+        {homeTaglines[taglineIndex]}
+      </h1>
+      <div className="tagline-controls" aria-label="Hero taglines">
+        {homeTaglines.map((tagline, index) => (
+          <button
+            aria-label={`Show tagline ${index + 1}: ${tagline}`}
+            aria-pressed={taglineIndex === index}
+            className={taglineIndex === index ? "is-active" : undefined}
+            key={tagline}
+            onClick={() => setTaglineIndex(index)}
+            type="button"
+          />
+        ))}
+      </div>
+    </>
   );
 }
 

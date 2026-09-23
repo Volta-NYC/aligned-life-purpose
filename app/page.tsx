@@ -2,9 +2,10 @@ import Link from "next/link";
 import {
   CtaBand,
   OfferingGrid,
-  PlaceholderImage,
+  PortraitImage,
   ProcessRail,
   SectionIntro,
+  TaglineCycle,
   TransitionMap,
 } from "./components";
 import { imageAssets, transitions } from "./data";
@@ -15,7 +16,7 @@ export default function HomePage() {
       <section className="home-hero">
         <div className="hero-copy reveal">
           <p className="eyebrow">Life coaching for professionals in transition</p>
-          <h1>Find your footing in the season that is reshaping your life.</h1>
+          <TaglineCycle />
           <p className="hero-lede">
             Aligned Life Purpose supports professionals pursuing promotions, changing careers,
             starting businesses, growing families, facing health crises, becoming empty nesters, or
@@ -30,7 +31,7 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-        <TransitionMap image={imageAssets.conversation} />
+        <TransitionMap image={imageAssets.headshot} />
       </section>
 
       <section className="ticker-band" aria-label="Transitions supported">
@@ -52,7 +53,7 @@ export default function HomePage() {
 
       <section className="split-section">
         <div className="image-panel reveal">
-          <PlaceholderImage label={imageAssets.journal} />
+          <PortraitImage image={imageAssets.outdoorsPortrait} />
         </div>
         <div className="split-copy reveal delay-1">
           <p className="eyebrow">For individual clients</p>
@@ -91,7 +92,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="image-panel reveal delay-1">
-          <PlaceholderImage label={imageAssets.care} />
+          <PortraitImage image={imageAssets.patternedPortrait} />
         </div>
       </section>
 
