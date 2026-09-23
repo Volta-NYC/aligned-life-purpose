@@ -183,16 +183,6 @@ export function TransitionMap({ image }: { image?: ImageAsset }) {
   return (
     <div className="transition-map reveal delay-1">
       {image ? <PortraitImage image={image} priority /> : null}
-      <div className="map-overlay">
-        <span className="node node-a" />
-        <span className="node node-b" />
-        <span className="node node-c" />
-        <span className="node node-d" />
-        <svg viewBox="0 0 420 420" aria-hidden="true">
-          <path d="M70 285 C130 170 190 340 250 205 S340 120 360 245" />
-          <path d="M90 138 C150 98 210 112 258 170 S322 268 350 304" />
-        </svg>
-      </div>
     </div>
   );
 }
